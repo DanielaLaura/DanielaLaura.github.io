@@ -4,7 +4,12 @@ title: About
 permalink: /about/
 published: true
 ---
-
+---
+layout: page
+title: About
+permalink: /about/
+published: true
+---
 
 
 Currently I am an aspiring Data scientist  in Montreal, Canada,  building up skills and looking for oportunities in the domain. 
