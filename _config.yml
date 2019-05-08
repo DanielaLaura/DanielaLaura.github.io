@@ -9,7 +9,7 @@ name: Laura Manolache
 description: Data Scientist
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://github.com/DanielaLaura/DanielaLaura.github.io/blob/master/images/laura.png
+avatar: https://github.com/DanielaLaura.png
 #
 # Flags below are optional
 #
@@ -17,15 +17,15 @@ avatar: https://github.com/DanielaLaura/DanielaLaura.github.io/blob/master/image
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email:
+  email: manolache.laura@icloud.com
   facebook:
   flickr:
-  github: barryclark/jekyll-now
+  github: DanielaLaura
   instagram:
   linkedin:
   pinterest:
   rss: # just type anything here for a working RSS icon
-  twitter: jekyllrb
+  twitter: 
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
@@ -52,7 +52,17 @@ baseurl: ""
 # !! You don't need to change any of the configuration flags below !!
 #
 
-permalink: /:title/
+excerpt_separator: <!--more-->
+
+prose:
+  metadata:
+    _posts:
+      - name: "title"
+        field:
+          element: "text"
+          label: "title"
+          
+permalink: /:categories/:title/
 
 # The release of Jekyll Now that you're using
 version: v1.2.0
@@ -64,8 +74,9 @@ kramdown:
   # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
   syntax_highlighter: rouge
   syntax_highlighter_opts:
-    # Use existing pygments syntax highlighting css
-    css_class: 'highlight'
+     default_lang: python
+     # Use existing pygments syntax highlighting css
+     css_class: 'highlight'
 
 # Set the Sass partials directory, as we're using @imports
 sass:
@@ -83,3 +94,5 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+
+theme: jekyll-theme-dinky
