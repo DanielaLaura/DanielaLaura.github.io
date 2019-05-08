@@ -2,14 +2,23 @@
 layout: page
 title: About
 permalink: /about/
+published: true
 ---
+---
+layout: page
+title: About
+permalink: /about/
+published: true
+---
+Currently I am an aspiring Data scientist  in Montreal, Canada,  building up skills and looking for oportunities in the domain. 
+    
+*****
+* GitHub: [LauraManolache](https://github.com/DanielaLaura)
 
-Some information about you!
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+*****
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+If you have a data science question or would like to dicuss anything data science related I'm responsive directly at [manolache.laura@icloud.com](mailto:manolache.laura@icloud.com).
+
+*****
