@@ -7,6 +7,8 @@
 
 @import "reset";
 @import "variables";
+@import "code-highlighting";
+@import "svg-icons";
 // Syntax highlighting @import is at the bottom of this file
 
 /**************/
@@ -23,20 +25,26 @@ body {
   color: $darkGray;
 }
 
+.gist {
+   center {
+      font-size: 14px
+   }
+}
+
 .container {
-  margin: 0 auto;
-  max-width: 740px;
-  padding: 0 10px;
-  width: 100%;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 10px;
+    width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
   color: $darkerGray;
-  font-weight: bold;
+  font-weight: 400;
 
   line-height: 1.7;
-  margin: 1em 0 15px;
+  margin: 1em 0 5px;
   padding: 0;
 
   @include mobile {
@@ -45,27 +53,37 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 30px;
+  font-weight: 400;
+  font-size: 36px;
   a {
-    color: inherit;
-  }
+    color: #021121;
+  }  
 }
 
 h2 {
+  width: 100%;
+  float: left;
   font-size: 24px;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 h4 {
-  font-size: 18px;
-  color: $gray;
+  font-size: 20px;
+}
+
+hr {
+    border-style: dashed;
+    border-width: 1px;
+    border-color: #93938e;
 }
 
 p {
-  margin: 15px 0;
+  font-size: 16px;
+  font-family: Arial;
+  margin: 10px 0;
 }
 
 a {
@@ -108,7 +126,56 @@ strong, b {
 
 img {
   max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
 }
+
+// Captions for images
+img + em {
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 8px;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: black;
+}
+
+// categories
+.post-info {
+	height: 30px;
+	width: 95%;
+}
+ 
+.post-categories {
+	font-size: 16px;
+	float: right;
+    font-style: italic;
+ }
+ 
+.category-head {
+ 	text-transform: capitalize;
+}
+ 
+ 
+ // Container for holding live code
+ iframe {
+	height: 100%;
+    width: 100%;
+    frameborder: 5px;
+ }
+ 
+ .code-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 90px;
+    margin-left: -90px;
+    width: 900px;
+    height: 600px;
+ }
 
 // Fixes images in popup boxes from Google Translate
 .gmnoprint img {
@@ -116,6 +183,7 @@ img {
 }
 
 .date {
+  float: left;
   font-style: italic;
   color: $gray;
 }
@@ -151,12 +219,12 @@ img {
 //
 
 .wrapper-masthead {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .masthead {
   padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 4px groove #222;
 
   @include mobile {
     text-align: center;
@@ -165,8 +233,8 @@ img {
 
 .site-avatar {
   float: left;
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   margin-right: 15px;
 
   @include mobile {
@@ -176,18 +244,25 @@ img {
   }
 
   img {
+    margin-top: 0px;
     border-radius: 5px;
   }
 }
 
 .site-info {
-  float: left;
-
+  float: none;
+  transform: translateY(-5px);
   @include mobile {
     float: none;
     display: block;
     margin: 0 auto;
   }
+}
+
+.medium-link {
+	display: block;
+    font-size: 16px;
+	margin: 5px;
 }
 
 .site-name {
@@ -201,9 +276,9 @@ img {
 }
 
 .site-description {
-  margin: -5px 0 0 0;
+  margin: 2px 0 0 0;
   color: $gray;
-  font-size: 16px;
+  font-size: 20px;
 
   @include mobile {
     margin: 3px 0;
@@ -211,10 +286,11 @@ img {
 }
 
 nav {
+  horizontal-alignment: right;
   float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
+  margin-top: 10px; // @TODO: Vertically middle align
   font-family: $helveticaNeue;
-  font-size: 18px;
+  font-size: 24px;
 
   @include mobile {
     float: none;
@@ -224,11 +300,12 @@ nav {
   }
 
   a {
-    margin-left: 20px;
+    margin-left: 4px;
     color: $darkGray;
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
+	font-size: 24px;
 
     @include mobile {
       margin: 0 10px;
@@ -242,8 +319,9 @@ nav {
 //
 
 .posts > .post {
-  padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
+  padding-top: 30px;
+  padding-bottom: 100px;
+  border-bottom: 5px solid #333;
 }
 
 .posts > .post:last-child {
@@ -283,7 +361,6 @@ footer {
   text-align: center;
 }
 
+
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
-@import "highlights";
-@import "svg-icons";
