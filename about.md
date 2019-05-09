@@ -1,9 +1,4 @@
----
-layout: page
-title: About
-permalink: /about/
-published: true
----
+
 ---
 layout: page
 title: About
@@ -23,6 +18,6 @@ Currently I am an aspiring Data scientist  in Montreal, Canada,  building up ski
 
 ### Contact me
 
-If you have a data science question or would like to dicuss anything data science related I'm responsive directly at [manolache.laura@icloud.com](mailto:manolache.laura@icloud.com).
+If you have a data science question or would like to discuss anything data science related I'm responsive directly at [manolache.laura@icloud.com](mailto:manolache.laura@icloud.com).
 
 *****
