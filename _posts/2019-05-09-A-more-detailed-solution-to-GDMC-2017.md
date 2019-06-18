@@ -16,7 +16,7 @@ solution related to a specific business problem. For this, the [Game Data Mining
 game log data. It consisted of one training dataset and two test datasets. Each of the datasets covered different periods of time and
 had information about different users. The aim of this competition  was to predict churn and life expectancy during a certain prediction period.
 
-![](https://github.com/DanielaLaura/DanielaLaura.github.io/blob/master/images/futureOfGaming1.png)
+![](/images/futureOfGaming1.png)
 *https://qz.com/is/what-happens-next-2/1438720/future-of-gaming/
 
 
