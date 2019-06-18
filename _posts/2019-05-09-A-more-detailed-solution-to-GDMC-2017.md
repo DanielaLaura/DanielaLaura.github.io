@@ -70,7 +70,7 @@ For customer churn, the parameters are:
 - prediction window: the period of time we want to make predictions for
 The following diagram shows each of these concepts while filling in the details with the problem definition we’ll work through.
 
-![](https://github.com/DanielaLaura/DanielaLaura.github.io/blob/master/images/Diagram.png)
+![](/images/Diagram.png)
 *Parameters defining the customer churn prediction problem.
 
 Unlike the telecommunication services or other online subscriptions, for which a user churning can be easily defined and identified 
