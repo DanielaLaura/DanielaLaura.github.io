@@ -7,7 +7,7 @@ categories:
   - machine learning
 ---  
 ## Part 1 - Prediction engineering: How to Set Up
- Your Machine Learning Problem 
+##   Your Machine Learning Problem 
 
 
 While data science has become essential to almost all industries,  in video games - reducing player churn is crucial to increase player engagement and game
