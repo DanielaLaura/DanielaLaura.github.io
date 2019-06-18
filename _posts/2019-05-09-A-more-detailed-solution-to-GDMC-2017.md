@@ -17,8 +17,10 @@ game log data. It consisted of one training dataset and two test datasets. Each 
 had information about different users. The aim of this competition  was to predict churn and life expectancy during a certain prediction period.
 
 ![](/images/futureOfGaming1.png)
-*https://qz.com/is/what-happens-next-2/1438720/future-of-gaming/
+*https://qz.com/is/what-happens-next-2/1438720/future-of-gaming/ .*
 
+
+* * *
 
 This is the first in a three-part series on how to approach machine learning.
 
@@ -40,6 +42,8 @@ are a crucial part of building successful solutions to time-series problems that
 solution for this competition, accounting for the time after cuttoff as censored time. To be mentioned that using invalid data to make features leads to models that do 
 well in development but fail in deployment.
 
+* * *
+
 ### Dataset for Players Churn
 
 Log data were provided in CSV format. Each player’s action log was stored in an individual 
@@ -53,6 +57,8 @@ To be able to do an extensive data analysis,a unique data frame which contains a
 
 <script src="https://gist.github.com/DanielaLaura/db1f80b4c22c3278975d5f6c130c5e4e.js" charset="utf-8"></script>
 <center>Data processing code.</center>
+
+* * *
 
 ### Finding Historical Labels
 
@@ -71,12 +77,14 @@ For customer churn, the parameters are:
 The following diagram shows each of these concepts while filling in the details with the problem definition we’ll work through.
 
 ![](/images/Diagram.png)
-*Parameters defining the customer churn prediction problem.
+*Parameters defining the customer churn prediction problem.*
 
 Unlike the telecommunication services or other online subscriptions, for which a user churning can be easily defined and identified 
 from the user unsubscribing, such isn’t the case for online game services. Online game players seldom delete their accounts
 or unsubscribe although they have no intention of resuming playing the game. In this case, a user who does not play a game for
 more than five weeks is defined as a churner.
+
+* * *
 
 ### Labeling Implementation
 
@@ -97,13 +105,14 @@ This table has a set of prediction times—the cutoff times—and the label duri
 The make_labels function then takes in the transactions for all customers along with the parameters and returns a table with the cutoff times and the label 
 for every customer.
 
+* * *
 
 ### Conclusion
 The process of prediction engineering is captured in three steps:
 
-1. Identify a business need that can be solved with available data
-2. Translate the business need into a supervised machine learning problem
-3. Create label times from historical data
+1. **Identify a business need that can be solved with available data**
+2. **Translate the business need into a supervised machine learning problem**
+3. **Create label times from historical data**
 
 Getting prediction engineering right is crucial and requires input from both the business and data science sides of a business. 
 By writing the code for prediction engineering to accept different parameters, we can rapidly change the prediction problem if the needs of our company change.
