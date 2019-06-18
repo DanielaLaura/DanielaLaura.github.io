@@ -17,7 +17,7 @@ game log data. It consisted of one training dataset and two test datasets. Each 
 had information about different users. The aim of this competition  was to predict churn and life expectancy during a certain prediction period.
 
 ![](/images/futureOfGaming1.png)
-*[Source](https://qz.com/is/what-happens-next-2/1438720/future-of-gaming/) .*
+*[Future of gaming](https://qz.com/is/what-happens-next-2/1438720/future-of-gaming/) *
 
 <!--more-->
 
