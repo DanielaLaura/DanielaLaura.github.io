@@ -56,7 +56,7 @@ To be able to do an extensive data analysis,a unique data frame which contains a
 
 
 <script src="https://gist.github.com/DanielaLaura/db1f80b4c22c3278975d5f6c130c5e4e.js" charset="utf-8"></script>
-<center>*Data processing code.*</center>
+*Data processing code.*
 
 * * *
 
