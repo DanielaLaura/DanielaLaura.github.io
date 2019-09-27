@@ -1,6 +1,6 @@
 ---
 published: true
-title: "A more detailed solution to GDMC 2017"
+title: A more detailed solution to GDMC 2017
 categories:
   - video games
   - behavioral data

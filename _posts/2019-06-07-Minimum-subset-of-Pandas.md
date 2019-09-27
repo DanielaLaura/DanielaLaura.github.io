@@ -1,6 +1,6 @@
 ---
 published: true
-title: "Minimum subset of Pandas"
+title: Minimum subset of Pandas
 categories:
   - pandas
   - data analysis
