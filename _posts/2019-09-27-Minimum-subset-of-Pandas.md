@@ -1,4 +1,3 @@
-
 ---
 published: true
 title: "Minimum subset of Pandas"
@@ -9,7 +8,7 @@ categories:
 ---  
 ## Minimum subset of Pandasm 
 
-The whole point of a data analysis library should be to provide you with the tools so that you can focus on the data analysis. While Pandas does provide you with the right tools, it doesnâ€™t do so in a way that allows you to focus on the analysis. 
+The whole point of a data analysis library should be to provide you with the tools so that you can focus on the data analysis. While Pandas does provide you with the right tools, it doesn’t do so in a way that allows you to focus on the analysis. 
 Instead, users are forced to tread through the complex and overabundant syntax.
 
 
@@ -20,7 +19,7 @@ With this minimum subset of Pandas:
 - Your code will be simple, explicit, straightforward, and boring
 - You will choose one obvious way to accomplish a task
 - You will use this obvious way every single time
-- You wonâ€™t have to retain as many commands in working memory
+- You won’t have to retain as many commands in working memory
 - Your code will be easier to understand by others and by you
 
 ### Multitude Stack Overflow Answers
@@ -44,14 +43,14 @@ We will now cover a series of specific examples within Pandas where multiple app
 - The similarity between pivot and unstack
 
 
-The concrete examples were all derived by the following principle: If a method does not provide any additional functionality over another method (i.e. its functionality is a subset of another) then it shouldnâ€™t be used.
+The concrete examples were all derived by the following principle: If a method does not provide any additional functionality over another method (i.e. its functionality is a subset of another) then it shouldn’t be used.
 Methods should only be considered if they have some additional, unique functionality.
 
 
 ### Selecting a Single Column of Data
 
 Selecting a single column of data from a Pandas DataFrame is just about the simplest task you can do and unfortunately, it is here where we first encounter the multiple-choice option that Pandas presents to its users.
-You may select a single column as a Series with either the brackets or dot notation. Letâ€™s read in a small, trivial DataFrame and select a column using both methods.
+You may select a single column as a Series with either the brackets or dot notation. Let’s read in a small, trivial DataFrame and select a column using both methods.
 
     import pandas as pd
     df=pd.read_csv('play_evaluation.csv', sep=';')
@@ -70,7 +69,7 @@ Selection with dot notation Alternatively, you may select a single column with d
 ![](/images/2.png)
 
 ### Issues with the dot notation
-There are three issues with using dot notation. It doesnâ€™t work in the following situations:
+There are three issues with using dot notation. It doesn’t work in the following situations:
 
 - When there are spaces in the column name
 - When the column name is a variable
@@ -97,7 +96,7 @@ To make selections explicit, the loc and iloc indexers were made available. The 
 
 ### Selection with at and iat
 Two additional indexers, at and iat, exist that select a single cell of a DataFrame. These provide a slight performance advantage over their analogous loc and iloc indexers. But, they introduce the additional burden of having to remember what they do. 
-Also, for most data analyses, the increase in performance isnâ€™t useful unless itâ€™s being done at scale. And if performance truly is an issue, then taking your data out of a DataFrame and into a NumPy array will give you a large performance gain.
+Also, for most data analyses, the increase in performance isn’t useful unless it’s being done at scale. And if performance truly is an issue, then taking your data out of a DataFrame and into a NumPy array will give you a large performance gain.
 
 ### Performance comparison iloc vs iat vs NumPy
 Here we create a NumPy array with 100k rows and 5 columns containing random data. We then create a DataFrame out of it and make the selections.
@@ -108,11 +107,11 @@ Here we create a NumPy array with 100k rows and 5 columns containing random data
      col = 3
 
      %timeit df1.iloc[row, col]
-     10.3 Âµs Â± 680 ns per loop (mean Â± std. dev. of 7 runs, 100000 loops each)
+     10.3 µs ± 680 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
      %timeit df1.iat[row, col]
-     6.83 Âµs Â± 259 ns per loop (mean Â± std. dev. of 7 runs, 100000 loops each)
+     6.83 µs ± 259 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
      %timeit a[row, col]
-     203 ns Â± 11.1 ns per loop (mean Â± std. dev. of 7 runs, 10000000 loops each)
+     203 ns ± 11.1 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
 
 While iat is a little less than twice as fast asiloc, selection with a NumPy array is about 60x as fast. So, if you really had an application that had performance requirements, you should be using NumPy directly and not Pandas.
 
@@ -142,9 +141,9 @@ I only use isna and notna I use the methods that end in na to match the names of
 There are a number of syntaxes that get used for the groupby method when performing an aggregation. I suggest choosing a single syntax so that all of your code looks the same.
 
 Typically, when calling the groupby method, you will be performing an aggregation. This is the by far the most common scenario. When you are performing an aggregation during a groupby, there will always be three components:
-- Grouping column â€” Unique values form independent groups
-- Aggregating column â€” Column whose values will get aggregated; usually numeric
-- Aggregating function â€” How the values will get aggregated (sum, min, max, mean, median, etcâ€¦)
+- Grouping column — Unique values form independent groups
+- Aggregating column — Column whose values will get aggregated; usually numeric
+- Aggregating function — How the values will get aggregated (sum, min, max, mean, median, etc…)
 
 There are a few different syntaxes that Pandas allows to perform a groupby aggregation. The following is the one I use. df.groupby('grouping column').agg({'aggregating column': 'aggregating function'})
 
@@ -227,7 +226,7 @@ We can duplicate this data by using a pivot_table.
 ![](/images/12.png)
 Notice that the values are exactly the same. The only difference is that the store item column has been pivoted so its unique values are now the column names. The same three components of a groupby are found in a pivot_table.
 The grouping column(s) are passed to the index and columns parameters. The aggregating column is passed to the values parameter and the aggregating function is passed to the aggfunc parameter. 
-Itâ€™s actually possible to get an exact duplication of both the data and the shape by passing both grouping columns as a list to the index parameter.
+It’s actually possible to get an exact duplication of both the data and the shape by passing both grouping columns as a list to the index parameter.
 
    sales.pivot_table(index=['client_id','store_item_name' ], 
                     values='dollar_spent', aggfunc='sum').head()
