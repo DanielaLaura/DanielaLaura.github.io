@@ -8,6 +8,7 @@ categories:
 ---  
 ## Minimum subset of Pandasm 
 
+
 The whole point of a data analysis library should be to provide you with the tools so that you can focus on the data analysis. While Pandas does provide you with the right tools, it doesn’t do so in a way that allows you to focus on the analysis. 
 Instead, users are forced to tread through the complex and overabundant syntax.
 

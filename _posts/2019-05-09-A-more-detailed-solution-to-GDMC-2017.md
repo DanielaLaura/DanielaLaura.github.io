@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 title: A more detailed solution to GDMC 2017
 categories:
   - video games
