@@ -9,6 +9,7 @@ categories:
 ## Minimum subset of Pandasm 
 
 
+
 The whole point of a data analysis library should be to provide you with the tools so that you can focus on the data analysis. While Pandas does provide you with the right tools, it doesn’t do so in a way that allows you to focus on the analysis. 
 Instead, users are forced to tread through the complex and overabundant syntax.
 
@@ -23,6 +24,9 @@ With this minimum subset of Pandas:
 - You won’t have to retain as many commands in working memory
 - Your code will be easier to understand by others and by you
 
+<!--more-->
+
+* * *
 ### Multitude Stack Overflow Answers
 It is not uncommon to search for Pandas answers on Stack Overflow only to be met with several competing and varied results for common tasks. Treading through this deluge of information makes it difficult for those wanting to know the one idiomatic way to complete a task that they can commit to memory.
 
@@ -47,6 +51,7 @@ We will now cover a series of specific examples within Pandas where multiple app
 The concrete examples were all derived by the following principle: If a method does not provide any additional functionality over another method (i.e. its functionality is a subset of another) then it shouldn’t be used.
 Methods should only be considered if they have some additional, unique functionality.
 
+* * *
 
 ### Selecting a Single Column of Data
 
@@ -80,6 +85,8 @@ Why is this done when the brackets seem to be clearly superior? It might be beca
 The dot notation provides no additional functionality over the brackets and does not work in all situations. Therefore, I never use it. Its single advantage is three fewer keystrokes.
 
 I suggest using only the brackets for selecting a single column of data. Having just a single approach to this very common task will make your Pandas code much more consistent.
+
+* * *
 
 ### Converting object column to datatime
 
