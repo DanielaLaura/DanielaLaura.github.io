@@ -1,6 +1,7 @@
 ---
 published: true
 title: A more detailed solution to GDMC 2017
+date: 2019-05-09
 categories:
   - video games
   - behavioral data

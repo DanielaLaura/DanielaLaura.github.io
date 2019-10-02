@@ -1,6 +1,7 @@
 ---
 published: true
 title: Minimum subset of Pandas
+date: 2019-07-07
 categories:
   - pandas
   - data analysis
