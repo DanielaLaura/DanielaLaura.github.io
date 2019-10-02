@@ -99,4 +99,4 @@ exclude:
   - CNAME
 
 theme: minima
-future: false
+future: true
